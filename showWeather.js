@@ -1,10 +1,9 @@
 $(document).ready(function () {
-	// var weather;
 	$('button').click(function ( ) {
 		var name = encodeURI($('input').val());
-		//解决跨域问题,直接得到js对象
-		$.getJSON('http://v.juhe.cn/weather/index?type=jsonp&format=2&cityname='+name+'&key=853b9cc74bf35afd44b12b7486951c2a&callback=?', function (data,state) {
-		      var sk = data.result.sk; 
+		//解决跨域问题,直接得到js对象(https解决混合内容页面)
+		$.getJSON('https://v.juhe.cn/weather/index?type=jsonp&format=2&cityname='+name+'&key=853b9cc74bf35afd44b12b7486951c2a&callback=?', function (data,state) {
+		  var sk = data.result.sk; 
                   var today = data.result.today; 
                   var future = data.result.future;
                   var arr = [];
@@ -35,7 +34,10 @@ $(document).ready(function () {
                   for (var i = 0; i < arrFuture.length; i++) {
                         $('table:eq(2) tr:eq('+i+') td:eq(1)').text(arrFuture[i]);
                   }
-                  $('table:eq(2) tr:even').css('color','#03c');
+                  for (var index = 0; index < arrFuture.length; index = index + 5) {
+                       $('table:eq(2) tr:eq('+index+')').css('color','#03c');
+                  }
+                  
 	    });
 	});
 });
