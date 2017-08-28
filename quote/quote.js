@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var content = $('#content');
+    var content = $('#content');
     var author = $('#author');
     var text = $('#text');
     var qAuthor,qContent;
@@ -14,7 +14,7 @@ $(document).ready(function () {
          })("");
     }
 	$('button').click(function () {
-		$.getJSON('https://sslapi.hitokoto.cn/?encode=json', function (data) {
+		$.getJSON('https://sslapi.hitokoto.cn/?encode=json?callback=?', function (data) {
 			qContent = data.hitokoto;
             qAuthor = data.from; 
             author.html("—— " + qAuthor);
