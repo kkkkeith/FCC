@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>randomQuote</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    <script src="quote.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #b1b7fa;
+        }
+        #box {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            padding-right: 20px;
+            margin: -125px 0 0 -285px;
+            width: 550px;
+            min-height: 200px;
+            background-color: #fff;
+        }
+        i {
+            color: #fff;
+        }
+        #text {
+            width: 450px;
+            padding: 30px;
+            color: #b1b7fa;
+            font-size: 20px;
+        }
+        #text i {
+            position: relative;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            color: #b1b7fa;        
+        }
+        #content {
+            position: relative;
+            top: -50px;
+            left: 50px;
+            width: 45
+        }
+        #author {
+            position: relative;
+            left: 50px;
+            bottom: 10px;
+            width: 450px;
+            text-align: right;
+        }
+        #tat {
+            position: relative;
+            left: 40px;
+            bottom: 20px;
+        }
+        .square {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: #b1b7fa;
+        }
+        #newQuote {
+            position: relative;
+            left: 250px;
+            bottom: 5px;
+            height: 40px;
+            color: #fff;
+            border: none;
+            background-color: #b1b7fa;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div id="box"> 
+    <div id="text">
+        <i class="fa fa-quote-left fa-2x"></i>
+        <p id="content"></p>
+        <div id="author"></div>
+    </div>
+    <div id="tat">
+        <div class="qq square">
+            <i class="fa fa-qq fa-2x "></i>
+        </div>
+        <div class="weibo square">
+            <i class="fa fa-weibo fa-2x "></i>
+        </div>
+        <button id="newQuote">New quote</button>
+    </div>
+</div>
+</body>
+</html>
