@@ -14,8 +14,7 @@ $(document).ready(function () {
          })("");
     }
     $('button').click(function () {
-        var noCache = Date();
-        $.getJSON('https://sslapi.hitokoto.cn/?encode=json', {"noCache":noCache}, function (data) {
+        $.getJSON('https://sslapi.hitokoto.cn/?encode=json', function (data) {
             $qContent = data.hitokoto;
             $qAuthor = data.from; 
             $author.html("—— " + $qAuthor);
