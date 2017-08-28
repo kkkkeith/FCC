@@ -37,12 +37,12 @@ $(document).ready(function () {
             var sharesinastring = 'http://v.t.sina.com.cn/share/share.php?title='+content+author;  
             window.open(sharesinastring,'newwindow','height=400,width=400,top=100,left=100'); 
         }
-    qq.click(function () {
+        $qq.click(function () {
             var getContent = content.html();
             var getAuthor = author.html();
             qqShare(getContent, getAuthor);
         });
-        weibo.click(function () {
+        $weibo.click(function () {
             var getContent = content.html();
             var getAuthor = author.html();
             weiboShare(getContent, getAuthor);
