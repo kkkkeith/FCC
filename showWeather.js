@@ -1,4 +1,12 @@
 $(document).ready(function () {
+      function getTime () {
+            var date = new Date();
+            var nowTime = date.toLocaleString();
+            return nowTime;
+      }
+      setInterval(function () {
+            $('span').html(getTime)
+      },1000); 
 	$('button').click(function ( ) {
 		var name = encodeURI($('input').val());
 		//解决跨域问题,直接得到js对象(https解决混合内容页面)
@@ -28,6 +36,7 @@ $(document).ready(function () {
             	     //注意i的位置,要这样遍历
             	     $('table:eq(1) tr:eq('+i+') td:eq(1)').text(arr[i]);
                   }
+
                   for (var i = 0; i < arrToday.length; i++) {
                         $('table:eq(0) tr:eq('+i+') td:eq(1)').text(arrToday[i]);
                   }
