@@ -14,18 +14,18 @@ $(document).ready(function () {
          })("");
     }
 	$('button').click(function () {
-		$.getJSON('https://sslapi.hitokoto.cn/?encode=jsonp', function (data) {
+		$.getJSON('https://sslapi.hitokoto.cn/?encode=json', function (data) {
 			qContent = data.hitokoto;
-            qAuthor = data.from; 
-            author.html("—— " + qAuthor);
-            content.html(qContent);
-            var color = col();
-            $('body').css('backgroundColor', color);
-            newQuote.css('backgroundColor', color);
-            qq.css('backgroundColor', color);
-            weibo.css('backgroundColor', color);
-            left.css({'left':'0','color':color});
-            text.css('color', color);
+                    	qAuthor = data.from; 
+                	author.html("—— " + qAuthor);
+                	content.html(qContent);
+            		var color = col();
+            		$('body').css('backgroundColor', color);
+            		newQuote.css('backgroundColor', color);
+            		qq.css('backgroundColor', color);
+           		 weibo.css('backgroundColor', color);
+            		left.css({'left':'0','color':color});
+           		 text.css('color', color);
 		});
 	});
 	function qqShare(content, author) {    
