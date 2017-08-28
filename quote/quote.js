@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    jQuery.support.cors = true;  
+$(document).ready(function () { 
     var content = $('#content');
     var author = $('#author');
     var text = $('#text');
