@@ -1,0 +1,1 @@
+randomQutoe使用jQuery，random-quote使用JavaScript
