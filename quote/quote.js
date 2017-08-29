@@ -37,13 +37,13 @@ $(document).ready(function () {
             window.open(sharesinastring,'newwindow','height=400,width=400,top=100,left=100'); 
         }
         $qq.click(function () {
-            var getContent = content.html();
-            var getAuthor = author.html();
-            qqShare(getContent, getAuthor);
+            var $getContent = $content.html();
+            var $getAuthor = $author.html();
+            qqShare($getContent, $getAuthor);
         });
         $weibo.click(function () {
-            var getContent = content.html();
-            var getAuthor = author.html();
-            weiboShare(getContent, getAuthor);
+            var $getContent = $content.html();
+            var $getAuthor = $author.html();
+            weiboShare($getContent, $getAuthor);
         });
 });
