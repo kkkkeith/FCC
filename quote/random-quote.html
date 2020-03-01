@@ -165,7 +165,7 @@ function init () {
     newQuote.onclick = function () {
         createXHR().onreadystatechange;
         //启动请求
-        xhr.open("get","https://sslapi.hitokoto.cn/?encode=json",true);
+        xhr.open("get","https://v1.hitokoto.cn/?encode=json",true);
         //接收 要作为请求主体发送的数据，无则必填null
         xhr.send(null); 
         var col = color();
